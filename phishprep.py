@@ -23,13 +23,13 @@ def banner():
           ░  ░  ░ ░        ░   ░  ░  ░            ░        ░  ░         \n\
 {RESET}")
     print("Author: Jorge Taylor AkA L0rdV0ld3m0rt")
-    print("Inspired by Tyler Ramsbey — take his Hands-On Phishing course, it’s FIRE")
+    print("Inspired by Tyler Ramsbey - take his Hands-On Phishing course, it’s FIRE")
     print("HACK THE PLANET!\n")
 
     tips = [
         "🐟 Hook 'em with realism.",
         "🛡️ OpSec first. Always.",
-        "📜 Logs are your paper trail — Don't forget to clear them!",
+        "📜 Logs are your paper trail - Don't forget to clear them!",
         "🚀 Automate or perish.",
     ]
     print(f"[TIP] {random.choice(tips)}\n")
