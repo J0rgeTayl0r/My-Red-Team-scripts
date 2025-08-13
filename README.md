@@ -76,7 +76,7 @@ MIT License
 
 ## Author
 
-Jorge Taylor AkA L0rdV0ld3m0rt - Red Team Edition.  Inspired by Tyler Ramsbey, during his Hands-On Phishing, which I definitely recommend EVERYONE take the course its great. HACK THE PLANET! 
+Jorge Taylor AkA L0rdV0ld3m0rt - Inspired by Tyler Ramsbey, during his Hands-On Phishing, which I recommend EVERYONE take the course its great. HACK THE PLANET! 
 
 
 
