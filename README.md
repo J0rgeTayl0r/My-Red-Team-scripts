@@ -1,6 +1,6 @@
 # PhishPrep - Automated GoPhish Deployment Script
 
-PhishPrep is an automated deployment script for setting up GoPhish the phishing framework.  
+PhishPrep is an automated deployment script for setting up GoPhish, the phishing framework.  
 This tool automates system updates, GoPhish download, SSL certificate generation via Certbot (manual DNS challenge), and config updates, making it easy to spin up a phishing lab quickly.
 
 ## What it does
@@ -22,7 +22,7 @@ PhishPrep automates setting up a GoPhish phishing platform with SSL. It:
 - Generates SSL certificates using Certbot manual DNS challenge  
 - Automatically updates GoPhish `config.json` with proper listen URL and SSL cert paths  
 - Safe-by-default mode prevents accidental GoPhish launch  
-- `--real` mode flag to actually launch GoPhish after deployment   
+- `--real` mode flag to launch GoPhish after deployment   
 
 
 
@@ -30,7 +30,7 @@ PhishPrep automates setting up a GoPhish phishing platform with SSL. It:
 
 - Ubuntu or Debian-based Linux server (tested on Ubuntu 20.04+)  
 - Root or sudo privileges  
-- Domain name pointing to your server for SSL certificate  
+- Domain name pointing to your server for the SSL certificate  
 - Certbot installed via script 
 - Internet access to download GoPhish and Certbot packages  
 
@@ -40,16 +40,16 @@ PhishPrep automates setting up a GoPhish phishing platform with SSL. It:
 1. Clone or download the repository  
 2. Make the script executable:  
     ```bash
-    chmod +x deploy_gophish.py
+    chmod +x phishprep.py
     ```  
 3. Run the script:  
     - Dry run (safe mode, does not launch GoPhish):  
       ```bash
-      sudo ./deploy_gophish.py
+      sudo ./phishprep.py
       ```  
     - Real deployment (launches GoPhish after setup):  
       ```bash
-      sudo ./deploy_gophish.py --real
+      sudo ./phishprep.py --real
       ```  
 4. Follow the prompts, especially for DNS TXT record creation when Certbot asks  
 5. After completion, access your GoPhish admin panel at:  
@@ -62,7 +62,7 @@ PhishPrep automates setting up a GoPhish phishing platform with SSL. It:
 ## Notes
 
 - The script uses Certbot with `--manual --preferred-challenges dns` so you will have to add DNS TXT records yourself manually during cert generation.  
-- Auto-renewal of certificates is **not** configured you will need to manually renew certificates before expiry.  
+- Auto-renewal of certificates is **not** configured, you will need to manually renew certificates before expiry.  
 - The GoPhish launch command is disabled by default for safety and public repo reasons. Use `--real` to enable it.  
 - This script is intended for educational, research, and red team training purposes only. Use responsibly and ethically.  
 
