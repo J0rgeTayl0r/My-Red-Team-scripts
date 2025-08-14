@@ -1,6 +1,6 @@
 Setup Evilginx Automation Script
 
-Automates the installation and initial configuration of Evilginx3 on a VPS. Designed for ethical red team exercises and lab environments.
+Automates the installation and initial configuration of Evilginx3 on a VPS. Designed for ethical red team exercises and lab environments. 
 
 Usage
 
