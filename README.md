@@ -1,73 +1,40 @@
-# PhishPrep - Automated GoPhish Deployment Script
+# My Red Team Scripts
 
-PhishPrep is an automated deployment script for setting up GoPhish, the phishing framework.  
-This tool automates system updates, GoPhish download, SSL certificate generation via Certbot (manual DNS challenge), and config updates, making it easy to spin up a phishing lab quickly.
+A collection of automated scripts designed for ethical red team exercises, lab environments, and personal learning projects. Each script has its own folder with a dedicated README containing usage instructions and details.
 
-## What it does
+---
 
-PhishPrep automates setting up a GoPhish phishing platform with SSL. It:
-- Updates and upgrades your Ubuntu server.
-- Installs required packages: unzip, certbot.
-- Downloads and extracts the latest GoPhish release.
-- Runs Certbot manual DNS challenge with a **3-minute fixed wait** for DNS TXT propagation.
-- Automatically updates GoPhish's config.json with the generated SSL certificate paths.
-- Optionally launches GoPhish (use `--real` flag to actually start it).
-- Prints access info and tips.
+## Included Scripts
 
+- **setup-evilginx**  
+  Automates installation and initial configuration of Evilginx3 on a VPS.  
+  [More info →](setup-evilginx/README.md)
 
-## Features
+- **setup-gophish**  
+  Automates installation and initial configuration of GoPhish for phishing campaigns.  
+  [More info →](setup-gophish/README.md)
 
-- Automated system update and package installation (unzip, certbot)  
-- Downloads and extracts the latest GoPhish binary  
-- Generates SSL certificates using Certbot manual DNS challenge  
-- Automatically updates GoPhish `config.json` with proper listen URL and SSL cert paths  
-- Safe-by-default mode prevents accidental GoPhish launch  
-- `--real` mode flag to launch GoPhish after deployment   
+*(Add other scripts here as you build them)*
 
-
-
-## Requirements
-
-- Ubuntu or Debian-based Linux server (tested on Ubuntu 20.04+)  
-- Root or sudo privileges  
-- Domain name pointing to your server for the SSL certificate  
-- Certbot installed via script 
-- Internet access to download GoPhish and Certbot packages  
-
-
-## Usage
-
-1. Clone or download the repository  
-2. Make the script executable:  
-    ```bash
-    chmod +x phishprep.py
-    ```  
-3. Run the script:  
-    - Dry run (safe mode, does not launch GoPhish):  
-      ```bash
-      sudo ./phishprep.py
-      ```  
-    - Real deployment (launches GoPhish after setup):  
-      ```bash
-      sudo ./phishprep.py --real
-      ```  
-4. Follow the prompts, especially for DNS TXT record creation when Certbot asks  
-5. After completion, access your GoPhish admin panel at:  
- ```
-    https://your-domain:3333  
-   ```
-
-
+---
 
 ## Notes
 
-- The script uses Certbot with `--manual --preferred-challenges dns` so you will have to add DNS TXT records yourself manually during cert generation.  (I might add automation to this later, but I wanted to finish Tyler's course and thought this through after the original script was already completed)
-- Auto-renewal of certificates is **not** configured, you will need to manually renew certificates before expiry.  
-- The GoPhish launch command is disabled by default for safety and public repo reasons. Use `--real` to enable it.  
-- This script is intended for educational, research, and red team training purposes only. Use responsibly and ethically.  
+- These scripts are intended for **ethical use only** in controlled environments or with explicit permission.  
+- Always verify firewall rules, DNS settings, and dependencies before running the scripts.  
+- Each script can be run independently and has its own configuration options.   - Inspired by Tyler Ramsbey, during his Hands-On Phishing, which I recommend EVERYONE take the course its great.
 
+---
 
+## Portfolio / Showcase
 
+This repository demonstrates my ability to:  
+
+- Automate deployment of red team tools on VPS environments.  
+- Integrate tools like Evilginx and GoPhish in a repeatable workflow.  
+- Write clear documentation and provide modular, reusable scripts.  
+
+---
 ## License
 
 MIT License 
@@ -76,7 +43,7 @@ MIT License
 
 ## Author
 
-Jorge Taylor AkA L0rdV0ld3m0rt - Inspired by Tyler Ramsbey, during his Hands-On Phishing, which I recommend EVERYONE take the course its great. HACK THE PLANET! 
+Jorge Taylor AkA L0rdV0ld3m0rt HACK THE PLANET! 
 
 
 
